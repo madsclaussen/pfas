@@ -1,0 +1,9 @@
+# Offline docs are distributed as GitHub Release assets (see README)
+Offline docs/
+OpenCV 5.0 docs/
+Open3D 0.20 docs/
+*-docs.tar.gz
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

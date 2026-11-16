@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PfAS Offline Docs</title>
+<style>
+  :root { --bg:#fafaf8; --fg:#1d1d1b; --muted:#6b6b66; --card:#fff; --line:#e3e3de; --accent:#2457c5; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161616; --fg:#ececea; --muted:#9a9a94; --card:#1f1f1f; --line:#333; --accent:#7aa2ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:32px 16px 48px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; }
+  h2 { font-size:1.05rem; margin:32px 0 10px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  p.sub { color:var(--muted); margin:0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:10px; }
+  a.card { display:block; padding:12px 14px; background:var(--card); border:1px solid var(--line); border-radius:8px; color:var(--fg); text-decoration:none; }
+  a.card:hover { border-color:var(--accent); }
+  a.card b { color:var(--accent); }
+  a.card span { display:block; color:var(--muted); font-size:.88rem; }
+  code { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:1px 5px; font-size:.9em; }
+  ul { padding-left:20px; } li { margin:4px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Perception for Autonomous Systems: offline docs</h1>
+  <p class="sub">Each version matches the conda env <code>pfas</code>. Use the search box inside each docs site (Ctrl+F in the PDF).</p>
+
+  <h2>Most used in the course</h2>
+  <div class="grid">
+    <a class="card" href="Offline docs/scikit-learn 1.7/index.html"><b>scikit-learn 1.7</b><span>regression, clustering, SVM, PCA, RANSAC</span></a>
+    <a class="card" href="Offline docs/NumPy 2.2/index.html"><b>NumPy 2.2</b><span>arrays, linalg, SVD</span></a>
+    <a class="card" href="Offline docs/Matplotlib 3.10.9/Matplotlib-3.10.9.pdf"><b>Matplotlib 3.10.9</b><span>PDF, 1,409 pages</span></a>
+    <a class="card" href="OpenCV 5.0 docs/doc/doxygen/html/index.html"><b>OpenCV 5.0</b><span>image processing, features, stereo, calibration</span></a>
+    <a class="card" href="OpenCV 5.0 docs/doc/doxygen/html/d6/d00/tutorial_py_root.html"><b>OpenCV Python tutorials</b><span>Python-specific tutorials</span></a>
+    <a class="card" href="Open3D 0.20 docs/html/index.html"><b>Open3D 0.20</b><span>point clouds, ICP, registration</span></a>
+  </div>
+
+  <h2>Also available</h2>
+  <div class="grid">
+    <a class="card" href="Offline docs/SciPy 1.15.3/index.html"><b>SciPy 1.15.3</b><span>optimize, spatial, linalg</span></a>
+    <a class="card" href="Offline docs/pandas 2.3.3/index.html"><b>pandas 2.3.3</b><span>tables, CSV loading</span></a>
+    <a class="card" href="Offline docs/scikit-image 0.25/index.html"><b>scikit-image 0.25</b><span>filters, features, transforms</span></a>
+    <a class="card" href="Offline docs/Python 3.10/python-3.10.22-docs-html/index.html"><b>Python 3.10</b><span>language and standard library</span></a>
+    <a class="card" href="PFAS lectures/"><b>Lecture slides</b><span>PDFs folder</span></a>
+  </div>
+
+  <h2>Quick help without opening docs</h2>
+  <ul>
+    <li>In a notebook cell: <code>cv2.findHomography?</code> shows the docstring. Use <code>??</code> to see the source (for Python code).</li>
+    <li><code>help(o3d.pipelines.registration.registration_icp)</code> prints the full signature and description.</li>
+    <li>In VS Code: hover over a function for its docstring, or press <code>Ctrl+Space</code> inside the brackets to see parameters.</li>
+    <li><code>dir(cv2)</code> or <code>[n for n in dir(cv2) if 'calib' in n.lower()]</code> finds function names.</li>
+  </ul>
+</main>
+</body>
+</html>
